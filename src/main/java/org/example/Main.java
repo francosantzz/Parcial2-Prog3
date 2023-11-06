@@ -15,9 +15,18 @@ public class Main {
     // Función para verificar si una matriz representa a un mutante
     static boolean is_mutant(String[] filas){
         int cont = 0;
-        // Verifica si la primera fila es nula (no inicializada)
-        if (filas[0] == null) {
-            return false;
+        // Verifica que la matriz sea válida
+        String validCharacters = "ATCG";
+
+        for (String row : filas) {
+            if (row == null || row.isEmpty()) {
+                return false;
+            }
+            for (char c : row.toCharArray()) {
+                if (validCharacters.indexOf(c) == -1) {
+                    return false;
+                }
+            }
         }
 
         // Convierte las secuencias de ADN en una matriz de caracteres

@@ -29,11 +29,11 @@ class MainTest {
     @Test
     public void testIsMutantMutantInRow() {
         String[] mutantMatrix = {
-                "ATAAAA",
+                "ATaaaa",
                 "TACGCA",
                 "GCATAC",
                 "CTAGTC",
-                "ACAAAA",
+                "ACaaaa",
                 "AGTACG"
         };
         assertTrue(is_mutant(mutantMatrix));
@@ -42,10 +42,10 @@ class MainTest {
     @Test
     public void testIsMutantMutantInColumn() {
         String[] mutantMatrix = {
-                "ATCGAA",
-                "TTCGCA",
-                "GTATAA",
-                "CTAGTA",
+                "AtCGAa",
+                "TtCGCa",
+                "GtATAa",
+                "CtAGTa",
                 "ACGCTC",
                 "AGTACG"
         };
@@ -55,12 +55,12 @@ class MainTest {
     @Test
     public void testIsMutantMutantInDiagonal() {
         String[] mutantMatrix = {
-                "ATCGAA",
-                "TACGCT",
-                "GCATAC",
-                "CTAACC",
-                "ACGCTA",
-                "AGCACC"
+                "Atcgaa",
+                "tAccgt",
+                "gcAtaC",
+                "ctaACt",
+                "acgCta",
+                "agCacc"
         };
         assertTrue(is_mutant(mutantMatrix));
     }
